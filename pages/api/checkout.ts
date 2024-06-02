@@ -53,7 +53,7 @@ export default async function handler(req:NextApiRequest, res:NextApiResponse) {
         cancel_url: process.env.SUCCESS_URL + '/cart?canceled=1',
         metadata: { orderId: orderDoc._id.toString(), test: 'ok' }
       })
-    
+      
       res.json({
         url: session.url,
       })
